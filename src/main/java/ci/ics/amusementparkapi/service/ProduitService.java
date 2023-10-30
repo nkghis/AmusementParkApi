@@ -1,14 +1,19 @@
 package ci.ics.amusementparkapi.service;
 
-import ci.ics.amusementparkapi.dto.produit.ProduitINPUT;
-import ci.ics.amusementparkapi.dto.produit.ProduitOUTPUT;
+import ci.ics.amusementparkapi.dto.request.ProduitRequest;
+import ci.ics.amusementparkapi.dto.response.ProduitResponse;
+import ci.ics.amusementparkapi.exception.EntityNotFoundException;
+import ci.ics.amusementparkapi.exception.FieldDuplicateException;
 
 import java.util.List;
 
 public interface ProduitService {
 
-    void create(ProduitINPUT input);
+    ProduitResponse create(ProduitRequest input) throws FieldDuplicateException;
 
-    List<ProduitOUTPUT> all();
+    ProduitResponse get(Long id) throws EntityNotFoundException;
+
+    List<ProduitResponse> all();
+
 
 }

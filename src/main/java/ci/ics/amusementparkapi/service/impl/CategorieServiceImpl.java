@@ -1,11 +1,10 @@
 package ci.ics.amusementparkapi.service.impl;
 
-import ci.ics.amusementparkapi.dto.categorie.CategorieINPUT;
+import ci.ics.amusementparkapi.dto.request.CategorieRequest;
 import ci.ics.amusementparkapi.entity.Categorie;
 import ci.ics.amusementparkapi.repository.CategorieRepository;
 import ci.ics.amusementparkapi.service.CategorieService;
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -14,7 +13,7 @@ public class CategorieServiceImpl implements CategorieService {
 
     private CategorieRepository categorieRepository;
     @Override
-    public void create(CategorieINPUT input) {
+    public void create(CategorieRequest input) {
 
         categorieRepository.save(
                 Categorie.builder()

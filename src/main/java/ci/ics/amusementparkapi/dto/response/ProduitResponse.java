@@ -1,6 +1,5 @@
-package ci.ics.amusementparkapi.dto.produit;
+package ci.ics.amusementparkapi.dto.response;
 
-import ci.ics.amusementparkapi.entity.Categorie;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ProduitOUTPUT {
+public class ProduitResponse {
 
     private Long id;
     private String nom;

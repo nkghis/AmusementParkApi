@@ -11,7 +11,9 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Builder
-@Table(name = "pass")
+@Table(name = "pass", //
+        uniqueConstraints = { //
+                @UniqueConstraint(name = "PASS_UK",columnNames = "nom") })
 public class Pass {
 
     @Id

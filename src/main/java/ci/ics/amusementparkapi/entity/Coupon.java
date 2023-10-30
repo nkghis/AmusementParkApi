@@ -10,7 +10,9 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-@Table(name = "coupons")
+@Table(name = "coupons", //
+        uniqueConstraints = { //
+                @UniqueConstraint(name = "COUPON_UK",columnNames = "code") })
 public class Coupon {
 
     @Id
@@ -26,4 +28,14 @@ public class Coupon {
 
     @Column(name = "statut")
     private boolean statut;
+
+    @Override
+    public String toString() {
+        if (statut){
+            return "UTILISE";
+        }else {
+            return "INUTILISE";
+        }
+
+    }
 }

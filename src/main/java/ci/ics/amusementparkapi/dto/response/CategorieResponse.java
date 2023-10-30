@@ -1,4 +1,4 @@
-package ci.ics.amusementparkapi.dto.categorie;
+package ci.ics.amusementparkapi.dto.response;
 
 import lombok.*;
 
@@ -7,7 +7,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class CategorieOUPUT {
+public class CategorieResponse {
     private Long id;
     private String type;
     private String description;

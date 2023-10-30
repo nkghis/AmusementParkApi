@@ -1,4 +1,4 @@
-package ci.ics.amusementparkapi.dto.categorie;
+package ci.ics.amusementparkapi.dto.request;
 
 import lombok.*;
 
@@ -7,7 +7,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class CategorieINPUT {
+public class CategorieRequest {
 
     private String type;
     private String description;

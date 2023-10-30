@@ -10,7 +10,9 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-@Table(name = "produits")
+@Table(name = "produits", //
+        uniqueConstraints = { //
+                @UniqueConstraint(name = "PRODUIT_UK",columnNames = "nom") })
 public class Produit {
 
     @Id
@@ -18,7 +20,7 @@ public class Produit {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "nom")
+    @Column(name = "nom", unique = true)
     private String nom;
 
     @Column(name = "prix")

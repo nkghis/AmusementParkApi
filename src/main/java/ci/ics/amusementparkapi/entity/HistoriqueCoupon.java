@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Builder
-@Table(name = "commandes")
+@Table(name = "historique_coupon")
 public class HistoriqueCoupon {
 
     @Id

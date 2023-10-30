@@ -1,7 +1,7 @@
 package ci.ics.amusementparkapi.service;
 
-import ci.ics.amusementparkapi.dto.categorie.CategorieINPUT;
+import ci.ics.amusementparkapi.dto.request.CategorieRequest;
 
 public interface CategorieService {
-    void create (CategorieINPUT input);
+    void create (CategorieRequest input);
 }

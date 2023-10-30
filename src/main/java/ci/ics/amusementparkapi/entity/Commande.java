@@ -35,8 +35,8 @@ public class Commande {
     @Column(name = "est_reduit")
     private boolean estReduit;
 
-    @Column(name = "code_coupon")
-    private String codeCoupon;
+ /*   @Column(name = "code_coupon")
+    private String codeCoupon;*/
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "caisseId", nullable = false)
