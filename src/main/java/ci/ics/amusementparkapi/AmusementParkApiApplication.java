@@ -24,6 +24,28 @@ public class AmusementParkApiApplication {
 		ApplicationContext ctx = 	SpringApplication.run(AmusementParkApiApplication.class, args);
 
 
+/*		System.out.println("===============DEBUT TRANSACTION=======================");
+		System.out.println("===============AJOUT CLIENT=======================");
+
+		CategorieRepository categorieRepository = ctx.getBean(CategorieRepository.class);
+		Categorie categorieADULTE = new Categorie();
+		categorieADULTE.setType("ADULTE");
+		categorieADULTE.setDescription("Uniquement pour les adultes");
+		categorieRepository.save(categorieADULTE);
+
+		Categorie categorieMINEUR = new Categorie();
+		categorieMINEUR.setType("MINEUR");
+		categorieMINEUR.setDescription("Uniquement pour les mineurs");
+		categorieRepository.save(categorieMINEUR);
+
+		Categorie categoriePERSONNE = new Categorie();
+		categoriePERSONNE.setType("PERSONNE");
+		categoriePERSONNE.setDescription("Pour tout le monde");
+		categorieRepository.save(categoriePERSONNE);
+
+		categorieRepository.findAll().forEach(u->System.out.println(u.getType()));
+		System.out.println("Categories ajoutés avec succès");
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++");*/
 
 	/*	DetailPass detailPass = new DetailPass();
 		String nom = detailPass.getProduit().getNom();*/
@@ -53,17 +75,20 @@ public class AmusementParkApiApplication {
 				};
 	}
 
+
 	@Bean
 	CommandLineRunner commandLineRunnerProduit(ProduitService produitService){
 		return
 				args -> {
-					produitService.create(ProduitRequest.builder()
+produitService.create(ProduitRequest.builder()
 									.nom("ENTREE")
 									.image("entre.jpg")
 									.description("Ce produit concerne les adultes, il s'agit de leur droit d'entrée sur le site")
 									.prix(500)
 									.categorie(1L)
 							.build());
+
+
 
 					produitService.create(ProduitRequest.builder()
 							.nom("BOISSON")
@@ -82,6 +107,7 @@ public class AmusementParkApiApplication {
 							.build());
 				};
 	}
+
 
 	@Bean
 	CommandLineRunner commandLineRunnerType(TypeRepository typeRepository){
@@ -129,10 +155,10 @@ public class AmusementParkApiApplication {
 					couponRepository.save(Coupon.builder().code("333").pourcentage(10).statut(false).build());
 					couponRepository.save(Coupon.builder().code("444").pourcentage(10).statut(false).build());
 				};
-	}
+	}*/
 
 
-*/
+
 
 
 }
